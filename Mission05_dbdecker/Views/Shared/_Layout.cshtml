@@ -1,0 +1,27 @@
+﻿<!--Author: Daniel Decker-->
+<!--This webpage displays information about Daniel Decker, and includes a grade calculator for IS 413-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="img/zoom-call.jpg" />
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <a asp-controller="Folder" asp-action="Index">Home</a>
+        <a asp-controller="Folder" asp-action="Grades">Grade Calculator</a>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+<script src="~/wwwroot/lib/jquery/jquery-3.6.3.min.js"></script>
+<script src="~/wwwroot/lib/bootstrap/js/bootstrap.js"></script>
+

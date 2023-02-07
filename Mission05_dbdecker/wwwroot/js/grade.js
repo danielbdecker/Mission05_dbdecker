@@ -1,16 +1,15 @@
 ﻿$("#btnSend").click(function () {
-    //grabs the values from the form and weights them together to get the grade for the class
+    //checks to see if values are in the right range
     var inputs = ['assignments', 'groupProject', 'quizzes', 'midtermExam', 'finalExam', 'intex'];
-
     for (var i = 0; i < inputs.length; i++) {
         var inputValue = $("#" + inputs[i]).val();
         console.log(inputValue);
         if (inputValue < 0 || inputValue > 100) {
             return;
             break;
-           
         }
     }
+    //grabs the values from the form and weights them together to get the grade for the class
     var grade = (($("#assignments").val() * 0.5) + ($("#groupProject").val() * 0.1) +
         ($("#quizzes").val()*0.1) + ($("#midtermExam").val()*0.1) +
         ($("#finalExam").val() * 0.1) + ($("#intex").val()) * 0.1);
